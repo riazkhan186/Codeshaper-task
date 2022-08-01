@@ -197,8 +197,86 @@ Gallery Area CSS
 
 .gallery-img-area .gallery-card {
   max-width: 392px;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #ffffff;
+}
+
+.gallery-img-area .gallery-img-card {
+  position: relative;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.gallery-img-area .gallery-img-card .gallery-img-text-area {
+  width: 85%;
+  height: auto;
+  padding: 15px;
+  text-align: center;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0;
+}
+
+.gallery-img-area .gallery-img-card .gallery-img-text-area p {
+  margin-bottom: 12px;
+  color: var(--whiteColor);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: var(--fontFamily);
+}
+
+.gallery-img-area .gallery-img-card .gallery-img-text-area h3 {
+  color: var(--whiteColor);
+  font-size: 35px;
+  font-weight: 400;
+  font-family: var(--fontFamily2);
+}
+
+.gallery-img-area .gallery-img-card .gallery-img-text-area .default-button {
+  border-color: var(--whiteColor);
+}
+
+.gallery-img-area .gallery-img-card .gallery-img-text-area .default-button span {
+  color: var(--whiteColor);
+}
+
+.gallery-img-area .gallery-img-card .gallery-img-text-area .default-button::before, .gallery-img-area .gallery-img-card .gallery-img-text-area .default-button::after {
+  background-color: var(--blackColor);
+}
+
+.gallery-img-area .gallery-img-card::before {
+  content: '';
+  width: 100%;
+  height: 0%;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+  background-color: var(--brownColor);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.gallery-img-area .gallery-img-card:hover .gallery-img-text-area {
+  opacity: 1;
+  z-index: 2;
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+.gallery-img-area .gallery-img-card:hover::before {
+  height: 100%;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
 }
 
 .button-area {

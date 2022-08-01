@@ -195,10 +195,80 @@ Gallery Area CSS
 .gallery-img-area {
     .gallery-card {
         max-width: 392px;
-        padding: {
-            left: 15px;
-            right: 15px;
+        margin: {
+            left: 10px;
+            right: 10px;
         };
+        border: 1px solid #ffffff;
+    }
+    .gallery-img-card {
+        position: relative;
+        margin: 10px;
+        overflow: hidden;
+        .gallery-img-text-area {            
+            width: 85%;
+            height: auto;
+            padding: 15px;
+            text-align: center;
+            transition: .5s ease-in-out;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            opacity: 0;
+            p {
+                margin-bottom: 12px;
+                color: var(--whiteColor);
+                font: {
+                    size: 15px;
+                    weight: 400;
+                    family: var(--fontFamily);
+                };
+            }
+            h3 {
+                color: var(--whiteColor);
+                font: {
+                    size: 35px;
+                    weight: 400;
+                    family: var(--fontFamily2);
+                };
+            }
+            .default-button {
+                border-color: var(--whiteColor);
+                span {
+                    color: var(--whiteColor);
+                }
+                &::before, &::after {
+                    background-color: var(--blackColor);
+                }
+            }
+        }
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 0%;
+            transition: .5s ease-in-out;
+            transition-delay: .2s;
+            background-color: var(--brownColor);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+
+        &:hover {
+            .gallery-img-text-area {
+                opacity: 1;
+                z-index: 2;
+                transition-delay: .3s;
+            }
+            &::before {
+                height: 100%;
+                transition-delay: 0s;
+            }
+        }
     }
 }
 .button-area {
