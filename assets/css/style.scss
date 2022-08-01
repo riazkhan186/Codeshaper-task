@@ -1,0 +1,207 @@
+@font-face {
+    font-family: Univers_LT_Std;
+    src: url(../fonts/UniversLTStd-Ex.otf);
+}
+@font-face {
+    font-family: PlantinMTProRg;
+    src: url(../fonts/PlantinMTProRg.otf);
+}
+
+:root {
+    --fontFamily: Univers_LT_Std;
+    --fontFamily2: PlantinMTProRg;
+    --blackColor: #303030;
+    --brownColor: #AB4E47;
+    --whiteColor: #ffffff;
+}
+
+/*================================
+Default CSS
+==================================*/
+a {
+    color: var(--blackColor);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.ptb-100 {
+    padding: {
+        top: 100px;
+        bottom: 100px;
+    };
+}
+
+.mt-60 {
+    margin-top: 40px;
+}
+.mt-90 {
+    margin-top: 140px;
+}
+.container {
+    max-width: 1300px;
+    margin: {
+        left: auto;
+        right: auto;
+    };
+}
+
+.default-button {
+    line-height: 1;
+    overflow: hidden;
+    padding: 15px 30px;
+    display: inline-block;
+    border: 1px solid var(--blackColor);
+    position: relative;
+    font: {
+        size: 15px;
+        weight: 400;
+        family: var(--fontFamily);
+    };
+    margin: {
+        left: auto;
+        right: auto;
+    };
+    span {
+        z-index: 2;
+        position: relative;
+        color: var(--blackColor);
+        transition: .5s ease-in-out;
+    }
+
+    &::before {
+        content: '';
+        width: 0%;
+        height: 105%;
+        z-index: 1;
+        transition: .5s ease-in-out;
+        background-color: var(--brownColor);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &::after {
+        content: '';
+        width: 0%;
+        height: 105%;
+        z-index: 1;
+        transition: .5s ease-in-out;
+        background-color: var(--brownColor);
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    &:hover {
+        span {
+            color: var(--whiteColor);
+        }
+        &::before, &::after {
+            width: 51%;
+        }
+    }
+}
+
+/*================================
+Header Area CSS
+==================================*/
+.header {
+    padding-top: 20px;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo-area {
+        h1 {
+            margin: {
+                top: 0px;
+                bottom: 0px;
+            };
+            font: {
+                size: 32px;
+                weight: 700;
+                family: var(--fontFamily);
+            };
+            a {
+                text-decoration: none;
+                
+            }
+        }
+    }
+    .navbar {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                display: inline-block;
+                margin-left: 20px;
+
+                font: {
+                    size: 14px;
+                    weight: 700;
+                    family: var(--fontFamily);
+                };
+
+                img {
+                    width: 18px;
+                    margin-bottom: -4px;
+                }
+            }
+        }
+    }
+}
+
+/*================================
+Gallery Area CSS
+==================================*/
+.section-title {
+    text-align: center;
+    span {
+        color: var(--blackColor);
+        font: {
+            size: 15px;
+            family: var(--fontFamily);
+        };
+    }
+    h3 {
+        letter-spacing: -1.7px;
+        margin: 20px 0px 12px;
+        color: var(--blackColor);
+        font: {
+            size: 50px;
+            weight: 300;
+            family: var(--fontFamily2);
+        };
+    }
+    p {
+        color: var(--blackColor);
+        font: {
+            size: 18px;
+            family: var(--fontFamily2);
+        };
+    }
+}
+.gallery-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.gallery-img-area {
+    .gallery-card {
+        max-width: 392px;
+        padding: {
+            left: 15px;
+            right: 15px;
+        };
+    }
+}
+.button-area {
+    display: block;
+    text-align: center;
+}

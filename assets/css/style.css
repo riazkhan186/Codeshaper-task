@@ -1,0 +1,208 @@
+@font-face {
+  font-family: Univers_LT_Std;
+  src: url(../fonts/UniversLTStd-Ex.otf);
+}
+
+@font-face {
+  font-family: PlantinMTProRg;
+  src: url(../fonts/PlantinMTProRg.otf);
+}
+
+:root {
+  --fontFamily: Univers_LT_Std;
+  --fontFamily2: PlantinMTProRg;
+  --blackColor: #303030;
+  --brownColor: #AB4E47;
+  --whiteColor: #ffffff;
+}
+
+/*================================
+Default CSS
+==================================*/
+a {
+  color: var(--blackColor);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.ptb-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.mt-60 {
+  margin-top: 40px;
+}
+
+.mt-90 {
+  margin-top: 140px;
+}
+
+.container {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.default-button {
+  line-height: 1;
+  overflow: hidden;
+  padding: 15px 30px;
+  display: inline-block;
+  border: 1px solid var(--blackColor);
+  position: relative;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: var(--fontFamily);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.default-button span {
+  z-index: 2;
+  position: relative;
+  color: var(--blackColor);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.default-button::before {
+  content: '';
+  width: 0%;
+  height: 105%;
+  z-index: 1;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background-color: var(--brownColor);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.default-button::after {
+  content: '';
+  width: 0%;
+  height: 105%;
+  z-index: 1;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background-color: var(--brownColor);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.default-button:hover span {
+  color: var(--whiteColor);
+}
+
+.default-button:hover::before, .default-button:hover::after {
+  width: 51%;
+}
+
+/*================================
+Header Area CSS
+==================================*/
+.header {
+  padding-top: 20px;
+}
+
+.header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .logo-area h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: var(--fontFamily);
+}
+
+.header .logo-area h1 a {
+  text-decoration: none;
+}
+
+.header .navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header .navbar ul li {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: var(--fontFamily);
+}
+
+.header .navbar ul li img {
+  width: 18px;
+  margin-bottom: -4px;
+}
+
+/*================================
+Gallery Area CSS
+==================================*/
+.section-title {
+  text-align: center;
+}
+
+.section-title span {
+  color: var(--blackColor);
+  font-size: 15px;
+  font-family: var(--fontFamily);
+}
+
+.section-title h3 {
+  letter-spacing: -1.7px;
+  margin: 20px 0px 12px;
+  color: var(--blackColor);
+  font-size: 50px;
+  font-weight: 300;
+  font-family: var(--fontFamily2);
+}
+
+.section-title p {
+  color: var(--blackColor);
+  font-size: 18px;
+  font-family: var(--fontFamily2);
+}
+
+.gallery-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.gallery-img-area .gallery-card {
+  max-width: 392px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.button-area {
+  display: block;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
