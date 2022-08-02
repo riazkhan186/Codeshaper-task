@@ -1,12 +1,11 @@
 @media only screen and (max-width: 767px) {
+  /*================================
+    Default CSS
+    ==================================*/
   .container, .container-fluid {
     max-width: 100%;
     padding-left: 15px;
     padding-right: 15px;
-  }
-  .default-button {
-    padding: 12px 20px;
-    font-size: 13px;
   }
   .mt-90 {
     margin-top: 0px;
@@ -18,6 +17,16 @@
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  /*================================
+    Button Area CSS
+    ==================================*/
+  .default-button {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+  /*================================
+    Header Area CSS
+    ==================================*/
   .header {
     padding-top: 10px;
   }
@@ -74,6 +83,9 @@
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
+  /*================================
+    Gallery Area CSS
+    ==================================*/
   .mobile-section-title {
     display: block;
   }
@@ -107,9 +119,15 @@
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+  /*================================
+    Default Area CSS
+    ==================================*/
   .container, .container-fluid {
     max-width: 540px;
   }
+  /*================================
+    Header Area CSS
+    ==================================*/
   .header .container-fluid {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -151,12 +169,11 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  /*================================
+    Default Area CSS
+    ==================================*/
   .container, .container-fluid {
     max-width: 720px;
-  }
-  .default-button {
-    padding: 12px 20px;
-    font-size: 13px;
   }
   .mt-90 {
     margin-top: 0px;
@@ -168,12 +185,25 @@
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  /*================================
+    Button Area CSS
+    ==================================*/
+  .default-button {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+  /*================================
+    Header Area CSS
+    ==================================*/
   .header .logo-area h1 {
     font-size: 24px;
   }
   .header .navbar ul li {
     font-size: 12px;
   }
+  /*================================
+    Gallery Area CSS
+    ==================================*/
   .mobile-section-title {
     display: block;
   }
@@ -189,6 +219,9 @@
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /*================================
+    Default Area CSS
+    ==================================*/
   .container, .container-fluid {
     max-width: 960px;
   }
@@ -199,6 +232,9 @@
   .mt-90 {
     margin-top: 80px;
   }
+  /*================================
+    Gallery Area CSS
+    ==================================*/
   .section-title span {
     font-size: 12px;
   }
@@ -214,9 +250,15 @@
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  /*================================
+    Default Area CSS
+    ==================================*/
   .mt-90 {
     margin-top: 90px;
   }
+  /*================================
+    Gallery Area CSS
+    ==================================*/
   .gallery-img-area .gallery-card {
     max-width: 380px;
     margin-left: 0px;
@@ -234,6 +276,9 @@
 }
 
 @media only screen and (min-width: 1550px) {
+  /*================================
+    Default Area CSS
+    ==================================*/
   .container-fluid {
     max-width: 1600px;
   }

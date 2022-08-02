@@ -55,6 +55,9 @@ img {
     };
 }
 
+/*================================
+Default Button CSS
+==================================*/
 .default-button {
     line-height: 1;
     overflow: hidden;
@@ -67,10 +70,12 @@ img {
         weight: 400;
         family: var(--fontFamily);
     };
+
     margin: {
         left: auto;
         right: auto;
     };
+
     span {
         z-index: 2;
         position: relative;
@@ -90,6 +95,7 @@ img {
         top: 50%;
         transform: translateY(-50%);
     }
+
     &::after {
         content: '';
         width: 0%;
@@ -107,6 +113,7 @@ img {
         span {
             color: var(--whiteColor);
         }
+
         &::before, &::after {
             width: 51%;
         }
@@ -123,6 +130,7 @@ Header Area CSS
         align-items: center;
         justify-content: space-between;
     }
+
     .logo-area {
         h1 {
             margin: {
@@ -139,6 +147,7 @@ Header Area CSS
             }
         }
     }
+
     .navbar {
         position: relative;
         #icon {
@@ -180,6 +189,7 @@ Gallery Area CSS
             family: var(--fontFamily);
         };
     }
+
     h3 {
         letter-spacing: -1.7px;
         margin: 20px 0px 12px;
@@ -190,6 +200,7 @@ Gallery Area CSS
             family: var(--fontFamily2);
         };
     }
+
     p {
         color: var(--blackColor);
         letter-spacing: -.5px;
@@ -212,6 +223,7 @@ Gallery Area CSS
         font-size: 36px;
         margin-bottom: 5px;
     }
+
     p {
         margin-top: 5px;
     }
@@ -229,6 +241,7 @@ Gallery Area CSS
             left: 10px;
             right: 10px;
         };
+
         &:hover {
             border-color: var(--blackColor);
         }
@@ -258,6 +271,7 @@ Gallery Area CSS
                     family: var(--fontFamily);
                 };
             }
+
             h3 {
                 color: var(--whiteColor);
                 font: {
@@ -266,11 +280,13 @@ Gallery Area CSS
                     family: var(--fontFamily2);
                 };
             }
+
             .default-button {
                 border-color: var(--whiteColor);
                 span {
                     color: var(--whiteColor);
                 }
+
                 &::before, &::after {
                     background-color: var(--blackColor);
                 }
@@ -296,16 +312,19 @@ Gallery Area CSS
                 z-index: 2;
                 transition-delay: .3s;
             }
+
             &::before {
                 height: 100%;
                 transition-delay: 0s;
             }
         }
     }
+
     .gallery-title {
         border: none !important;
     }
 }
+
 .button-area {
     display: block;
     text-align: center;
