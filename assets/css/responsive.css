@@ -1,0 +1,98 @@
+@media only screen and (max-width: 767px) {
+  .container, .container-fluid {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .header .container-fluid {
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+    display: block;
+    padding: 0;
+  }
+  .header .logo-area h1 {
+    font-size: 18px;
+  }
+  .header .navbar {
+    -webkit-box-shadow: -1px 1px 5px 1px #eeeeee;
+            box-shadow: -1px 1px 5px 1px #eeeeee;
+    margin-top: 10px;
+    position: relative;
+  }
+  .header .navbar #icon {
+    display: block;
+    position: absolute;
+    right: 0%;
+    top: -55px;
+    font-size: 20px;
+    color: var(--blackColor);
+  }
+  .header .navbar ul li {
+    font-size: 10px;
+    display: block;
+    margin: 0;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eeeeee;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .container, .container-fluid {
+    max-width: 540px;
+  }
+  .header .container-fluid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header .logo-area h1 {
+    font-size: 20px;
+  }
+  .header .navbar {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin-top: unset;
+  }
+  .header .navbar #icon {
+    display: none;
+  }
+  .header .navbar ul li {
+    font-size: 10px;
+    display: inline-block;
+    margin-left: 15px;
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container, .container-fluid {
+    max-width: 960px;
+  }
+  .header .logo-area h1 {
+    font-size: 24px;
+  }
+  .header .navbar ul li {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .container, .container-fluid {
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  .container-fluid {
+    max-width: 1600px;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

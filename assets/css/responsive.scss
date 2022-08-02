@@ -1,0 +1,119 @@
+@media only screen and (max-width: 767px) {
+    .container, .container-fluid {
+        max-width: 100%;
+        padding: {
+            left: 15px;
+            right: 15px;
+        };
+    }
+
+    .header {
+        .container-fluid {
+            align-items: unset;
+            display: block;
+            padding: 0;
+        }
+        .logo-area {
+            h1 {
+                font-size: 18px;
+            }
+        }
+        .navbar {
+            box-shadow: -1px 1px 5px 1px #eeeeee;
+            margin-top: 10px;
+            position: relative;
+            #icon {
+                display: block;
+                position: absolute;
+                right: 0%;
+                top: -55px;
+                font-size: 20px;
+                color: var(--blackColor);
+            }
+            ul {
+                li {
+                    font-size: 10px;
+                    display: block;
+                    margin: 0;
+                    padding: 10px 15px;
+                    border-bottom: 1px solid #eeeeee;;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+    .container, .container-fluid {
+        max-width: 540px;
+    }
+
+    .header {
+        .container-fluid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-area {
+            h1 {
+                font-size: 20px;
+            }
+        }
+        .navbar {
+            box-shadow: none;
+            margin-top: unset;
+            #icon {
+                display: none;
+            }
+            ul {
+                li {
+                    font-size: 10px;
+                    display: inline-block;
+                    margin-left: 15px;
+                    padding: 0;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .container, .container-fluid {
+        max-width: 960px;
+    }
+
+    .header {
+        .logo-area {
+            h1 {
+                font-size: 24px;
+            }
+        }
+        .navbar {
+            ul {
+                li {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .container, .container-fluid {
+        max-width: 1140px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    
+
+}
+
+@media only screen and (min-width: 1550px) {
+    .container-fluid {
+        max-width: 1600px;
+    }
+}

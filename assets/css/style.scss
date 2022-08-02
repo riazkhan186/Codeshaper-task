@@ -35,13 +35,20 @@ img {
 }
 
 .mt-60 {
-    margin-top: 40px;
+    margin-top: 50px;
 }
 .mt-90 {
-    margin-top: 140px;
+    margin-top: 120px;
 }
 .container {
     max-width: 1300px;
+    margin: {
+        left: auto;
+        right: auto;
+    };
+}
+.container-fluid {
+    max-width: 1320px;
     margin: {
         left: auto;
         right: auto;
@@ -111,7 +118,7 @@ Header Area CSS
 ==================================*/
 .header {
     padding-top: 20px;
-    .container {
+    .container-fluid {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -133,6 +140,9 @@ Header Area CSS
         }
     }
     .navbar {
+        #icon {
+            display: none;
+        }
         ul {
             margin: 0;
             padding: 0;
@@ -180,8 +190,10 @@ Gallery Area CSS
     }
     p {
         color: var(--blackColor);
+        letter-spacing: -.5px;
         font: {
             size: 18px;
+            weight: 400;
             family: var(--fontFamily2);
         };
     }
@@ -194,11 +206,15 @@ Gallery Area CSS
 .gallery-img-area {
     .gallery-card {
         max-width: 392px;
+        border: 1px solid #ffffff;
+        transition: .5s ease-in-out;
         margin: {
             left: 10px;
             right: 10px;
         };
-        border: 1px solid #ffffff;
+        &:hover {
+            border-color: var(--blackColor);
+        }
     }
     .gallery-img-card {
         position: relative;
@@ -269,6 +285,7 @@ Gallery Area CSS
             }
         }
     }
+    
 }
 .button-area {
     display: block;

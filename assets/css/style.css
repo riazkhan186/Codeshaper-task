@@ -34,15 +34,21 @@ img {
 }
 
 .mt-60 {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .mt-90 {
-  margin-top: 140px;
+  margin-top: 120px;
 }
 
 .container {
   max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-fluid {
+  max-width: 1320px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -114,7 +120,7 @@ Header Area CSS
   padding-top: 20px;
 }
 
-.header .container {
+.header .container-fluid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,6 +142,10 @@ Header Area CSS
 
 .header .logo-area h1 a {
   text-decoration: none;
+}
+
+.header .navbar #icon {
+  display: none;
 }
 
 .header .navbar ul {
@@ -181,7 +191,9 @@ Gallery Area CSS
 
 .section-title p {
   color: var(--blackColor);
+  letter-spacing: -.5px;
   font-size: 18px;
+  font-weight: 400;
   font-family: var(--fontFamily2);
 }
 
@@ -197,9 +209,15 @@ Gallery Area CSS
 
 .gallery-img-area .gallery-card {
   max-width: 392px;
+  border: 1px solid #ffffff;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
   margin-left: 10px;
   margin-right: 10px;
-  border: 1px solid #ffffff;
+}
+
+.gallery-img-area .gallery-card:hover {
+  border-color: var(--blackColor);
 }
 
 .gallery-img-area .gallery-img-card {
