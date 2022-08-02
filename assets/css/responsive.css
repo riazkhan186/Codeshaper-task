@@ -4,6 +4,23 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+  .default-button {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+  .mt-90 {
+    margin-top: 0px;
+  }
+  .mt-60 {
+    margin-top: 20px;
+  }
+  .ptb-100 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .header {
+    padding-top: 10px;
+  }
   .header .container-fluid {
     -webkit-box-align: unset;
         -ms-flex-align: unset;
@@ -15,25 +32,77 @@
     font-size: 18px;
   }
   .header .navbar {
-    -webkit-box-shadow: -1px 1px 5px 1px #eeeeee;
-            box-shadow: -1px 1px 5px 1px #eeeeee;
     margin-top: 10px;
     position: relative;
   }
   .header .navbar #icon {
-    display: block;
-    position: absolute;
     right: 0%;
-    top: -55px;
+    top: -40px;
+    border: 0px;
+    display: block;
     font-size: 20px;
+    position: absolute;
     color: var(--blackColor);
+    background-color: transparent;
+  }
+  .header .navbar ul {
+    opacity: 0;
+    height: 0;
+    z-index: -1;
+    visibility: hidden;
+    position: absolute;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+    background-color: var(--whiteColor);
+    -webkit-box-shadow: -1px 1px 5px 1px #eeeeee;
+            box-shadow: -1px 1px 5px 1px #eeeeee;
   }
   .header .navbar ul li {
-    font-size: 10px;
-    display: block;
     margin: 0;
+    display: block;
+    font-size: 10px;
     padding: 10px 15px;
     border-bottom: 1px solid #eeeeee;
+  }
+  .header .navbar .active {
+    opacity: 1;
+    height: auto;
+    z-index: 999;
+    visibility: visible;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  .mobile-section-title {
+    display: block;
+  }
+  .mobile-section-title span {
+    font-size: 13px;
+  }
+  .mobile-section-title h3 {
+    font-size: 26px;
+  }
+  .mobile-section-title p {
+    font-size: 14px;
+    letter-spacing: unset;
+    margin-top: 12px;
+  }
+  .gallery-img-area .section-title {
+    display: none;
+  }
+  .gallery-content {
+    display: block;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  .gallery-img-area .gallery-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .gallery-img-area .gallery-img-card .gallery-img-text-area h3 {
+    font-size: 24px;
   }
 }
 
@@ -56,12 +125,21 @@
     font-size: 20px;
   }
   .header .navbar {
-    -webkit-box-shadow: none;
-            box-shadow: none;
     margin-top: unset;
   }
   .header .navbar #icon {
     display: none;
+  }
+  .header .navbar ul {
+    opacity: 1;
+    height: auto;
+    z-index: 999;
+    visibility: visible;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    position: relative;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .header .navbar ul li {
     font-size: 10px;
@@ -74,7 +152,21 @@
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .container, .container-fluid {
-    max-width: 960px;
+    max-width: 720px;
+  }
+  .default-button {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+  .mt-90 {
+    margin-top: 0px;
+  }
+  .mt-60 {
+    margin-top: 20px;
+  }
+  .ptb-100 {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   .header .logo-area h1 {
     font-size: 24px;
@@ -82,11 +174,62 @@
   .header .navbar ul li {
     font-size: 12px;
   }
+  .mobile-section-title {
+    display: block;
+  }
+  .gallery-img-area .section-title {
+    display: none;
+  }
+  .gallery-img-area .gallery-img-card .gallery-img-text-area p {
+    font-size: 12px;
+  }
+  .gallery-img-area .gallery-img-card .gallery-img-text-area h3 {
+    font-size: 20px;
+  }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .container, .container-fluid {
-    max-width: 1140px;
+    max-width: 960px;
+  }
+  .ptb-100 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .mt-90 {
+    margin-top: 80px;
+  }
+  .section-title span {
+    font-size: 12px;
+  }
+  .section-title h3 {
+    font-size: 36px;
+  }
+  .section-title p {
+    font-size: 14px;
+  }
+  .gallery-img-area .gallery-img-card .gallery-img-text-area h3 {
+    font-size: 26px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .mt-90 {
+    margin-top: 90px;
+  }
+  .gallery-img-area .gallery-card {
+    max-width: 380px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .section-title span {
+    font-size: 12px;
+  }
+  .section-title h3 {
+    font-size: 40px;
+  }
+  .section-title p {
+    font-size: 17px;
   }
 }
 
